@@ -82,7 +82,12 @@ body
                 color: variables.$primary-color
 
         a
-            margin-top: 1000px
+            color: variables.$primary-color
+            font-weight: bold
+            font-size: 1.1rem
+
+            i 
+                margin-left: 1%
             
 
     &-d
@@ -94,6 +99,24 @@ body
             top: -50px
             right: 50px
             z-index: -1
+
+
+/*Serviços*/
+.servicos
+    background-color: variables.$bg-color-2
+    padding: 20vh 0
+
+    &-c
+        @include mixins.container
+
+        &-subtitulo
+            color: #385CDA
+            font-size: 1.3rem
+        
+        &-titulo
+            font-size: 3.13rem
+            color: variables.$white-color
+
     
 
 

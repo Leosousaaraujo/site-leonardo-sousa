@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*sass --watch sass/styles.sass:css/styles.css*/
 * {
   font-family: "Poppins";
@@ -73,7 +74,12 @@ body ul {
   color: #385CDA;
 }
 .banner-e a {
-  margin-top: 1000px;
+  color: #385CDA;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.banner-e a i {
+  margin-left: 1%;
 }
 .banner-d {
   width: 28vw;
@@ -84,6 +90,25 @@ body ul {
   top: -50px;
   right: 50px;
   z-index: -1;
+}
+
+/*Serviços*/
+.servicos {
+  background-color: #0E1220;
+  padding: 20vh 0;
+}
+.servicos-c {
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+}
+.servicos-c-subtitulo {
+  color: #385CDA;
+  font-size: 1.3rem;
+}
+.servicos-c-titulo {
+  font-size: 3.13rem;
+  color: #F5F5F5;
 }
 
 /*# sourceMappingURL=styles.css.map */
