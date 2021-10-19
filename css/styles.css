@@ -1,0 +1,89 @@
+/*sass --watch sass/styles.sass:css/styles.css*/
+* {
+  font-family: "Poppins";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+body a {
+  transition: 0.4s;
+  text-decoration: none;
+}
+body ul {
+  list-style: none;
+}
+
+/*Logo*/
+.header-logo {
+  margin-left: 19.5%;
+  font-size: 1.5rem;
+  color: #000;
+  padding: 2rem 0;
+}
+.header-logo span {
+  font-weight: 200;
+}
+
+/*Banner Topo*/
+.banner {
+  display: flex;
+  justify-content: space-between;
+  height: 90vh;
+  overflow: hidden;
+}
+.banner-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 240px;
+}
+.banner-social-text {
+  transform: rotate(-90deg);
+  font-size: 13px;
+  color: #1E2439;
+}
+.banner-social-line {
+  border-left: 2px solid #1E2439;
+  margin-top: 50px;
+  height: 200px;
+  width: 50%;
+}
+.banner-e {
+  margin-left: 14%;
+  margin-top: 15vh;
+  align-items: center;
+}
+.banner-e-subtitulo {
+  font-size: 18px;
+}
+.banner-e-principal {
+  margin-top: 10px;
+  margin-bottom: 15%;
+  font-size: 4.3vw;
+  font-weight: bold;
+  line-height: 5vw;
+  color: #21283F;
+}
+.banner-e-principal span {
+  color: #385CDA;
+}
+.banner-e a {
+  margin-top: 1000px;
+}
+.banner-d {
+  width: 28vw;
+}
+.banner-d-img {
+  width: 38vw;
+  position: relative;
+  top: -50px;
+  right: 50px;
+  z-index: -1;
+}
+
+/*# sourceMappingURL=styles.css.map */

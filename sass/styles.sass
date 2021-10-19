@@ -1,0 +1,106 @@
+/*sass --watch sass/styles.sass:css/styles.css*/
+    
+@use 'variables'
+@use 'mixins'
+
+
+*
+    font-family: 'Poppins'
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    overflow-x: hidden
+
+
+    a
+        transition: .4s
+        text-decoration: none
+    ul
+        list-style: none
+
+
+
+/*Logo*/
+.header
+
+    &-logo
+        margin-left: 19.5%
+        font-size: 1.5rem
+        color: #000
+        padding: 2rem 0
+
+        span
+            font-weight: 200
+
+
+/*Banner Topo*/
+.banner
+    display: flex
+    justify-content: space-between
+    height: 90vh
+    overflow: hidden
+
+    &-social
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: flex-end
+        width: 240px
+
+        &-text
+            transform: rotate(-90deg)
+            font-size: 13px
+            color: #1E2439
+    
+
+        &-line
+            border-left: 2px solid #1E2439
+            margin-top: 50px
+            height: 200px
+            width: 50%
+
+
+    &-e
+        margin-left: 14%
+        margin-top: 15vh
+        align-items: center
+
+        &-subtitulo
+            font-size: 18px
+        
+        &-principal
+            margin-top: 10px
+            margin-bottom: 15%
+            font-size: 4.3vw
+            font-weight: bold
+            line-height: 5vw
+            color: variables.$secundary-color
+
+            span
+                color: variables.$primary-color
+
+        a
+            margin-top: 1000px
+            
+
+    &-d
+        width: 28vw
+
+        &-img
+            width: 38vw
+            position: relative
+            top: -50px
+            right: 50px
+            z-index: -1
+    
+
+
+
+        
+
+           
+            
+
+        
