@@ -110,5 +110,24 @@ body ul {
   font-size: 3.13rem;
   color: #F5F5F5;
 }
+.servicos-c-cards {
+  display: flex;
+  justify-content: space-between;
+}
+.servicos-c-cards-web {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.285) 100%), linear-gradient(180deg, rgba(48, 144, 234, 0.88) 0%, rgba(46, 88, 235, 0.88) 100%), linear-gradient(180deg, rgba(47, 81, 202, 0.89) 0%, rgba(45, 154, 255, 0.89) 100%);
+  padding: 60px 43px;
+  border-radius: 21px;
+}
+.servicos-c-cards-web h2 {
+  color: #D9F1FF;
+}
+.servicos-c-cards-web ul {
+  color: #91B7FA;
+  line-height: 24px;
+}
+.servicos-c-cards-web a {
+  color: #fff;
+}
 
 /*# sourceMappingURL=styles.css.map */
