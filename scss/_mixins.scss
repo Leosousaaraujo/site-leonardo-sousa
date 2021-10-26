@@ -1,0 +1,17 @@
+@use 'variables.scss';
+
+@mixin container{
+    max-width: 1170px;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+}
+
+@mixin titulo{
+    font-size: 3.13rem;
+    color: variables.$white-color;
+}
+
+@mixin subtitulo{
+    color: variables.$primary-color;
+    font-size: 1.3rem;
+}

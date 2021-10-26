@@ -12,6 +12,7 @@
     <!--Icons-->
     <script src="https://kit.fontawesome.com/a5312c09f9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js" defer></script>
     <title>Leonardo Sousa Designer</title>
 </head>
 <body>
@@ -53,6 +54,7 @@
             <h1 class="servicos-c-titulo">Crio projetos digitais que ajudam marcas a se conectarem à pessoas.</h1>
             <div class="servicos-c-cards">
                 <div class="servicos-c-cards-web">
+                    <img src="img/projeto-web.png" alt="">
                     <h2>Projetos Web</h2>
                     <ul>
                         <li>• Web Sites</li>
@@ -60,18 +62,25 @@
                         <li>• Páginas de Captura</li>
                         <li>• Ecommerce</li>
                     </ul>
-                    <a href="#">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
+                    <div class="btn">
+                        <a href="#">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
                 </div>
                 <div class="servicos-c-cards-ui">
+                    <img src="img/ui-ux.png" alt="">
                     <h2>UI / UX Design</h2>
                     <ul>
                         <li>• Criação de Interfaces Web</li>
                         <li>• Criação de Apps</li>
                         <li>• Análize de Usabilidade</li>
+                        <br>
                     </ul>
-                    <a href="#">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
+                    <div class="btn">
+                        <a href="#">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
                 </div>
                 <div class="servicos-c-cards-design">
+                    <img src="img/design.png" alt="">
                     <h2>Design</h2>
                     <ul>
                         <li>• Design para Redes Sociais</li>
@@ -79,10 +88,48 @@
                         <li>• Tratamento de Imagens</li>
                         <li>• Edição de Video</li>
                     </ul>
-                    <a href="#">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
+                    <div class="btn">
+                        <a href="#">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+<!--Como irá funcionar-->
+    <section class="processo">
+        <div class="processo-c">
+            <h3 class="processo-c-subtitulo">E como irá funcionar?</h3>
+            <h1 class="processo-c-titulo">Um processo simples onde você participa da construção do projeto</h1>
+            
+            <div class="processo-c-steps">
+                <div class="processo-c-steps-tabs">
+                    <ul>
+                        <li data-tab-target="#gogo" id="btn1" onclick="btn1()" class="active">Gogo</li>
+                        <li data-tab-target="#pesquisa" id="btn2" onclick="btn2()">Pesquisa</li>
+                        <li data-tab-target="#design" id="btn3" onclick="btn3()">Design</li>
+                    </ul>
+                </div>
+                <div class="processo-c-steps-content">
+                    <div id="gogo" data-tab-content class="active">
+                        <h2>Onde tudo começa</h2>
+                        <p>Aqui é uma das estapas mais importantes! O Start, onde iremos conversar 
+                            para reunir todas as informações necessárias para a criação do projeto, e de 
+                            alinhar as idéias para começar a por a mão na massa.</p>
+                    </div>
+                    <div id="pesquisa" data-tab-content>
+                        <h2>Partimos</h2>
+                        <p>Nessa etapa, vou conhecer melhor o mercado, estudar a concorrencia, 
+                            fazer análizes, buscar referências, ou seja, tudo que me ajude a me integrar no ambiente do seu produto.</p>
+                    </div>
+                    <div id="design" data-tab-content>
+                        <h2>Criação</h2>
+                        <p>E começamos a colocar a mão na massa. Nessa etapa engloba dêsde a criação do rascunho até os ajustes finais e entrega do projeto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>

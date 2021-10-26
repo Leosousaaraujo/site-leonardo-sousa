@@ -10,11 +10,13 @@
 body {
   overflow-x: hidden;
 }
-body a {
+
+a {
   transition: 0.4s;
   text-decoration: none;
 }
-body ul {
+
+ul {
   list-style: none;
 }
 
@@ -70,7 +72,7 @@ body ul {
   line-height: 5vw;
   color: #21283F;
 }
-.banner-e-principal span {
+.banner-e span {
   color: #385CDA;
 }
 .banner-e a {
@@ -78,7 +80,7 @@ body ul {
   font-weight: bold;
   font-size: 1.1rem;
 }
-.banner-e a i {
+.banner-e i {
   margin-left: 1%;
 }
 .banner-d {
@@ -114,20 +116,102 @@ body ul {
   display: flex;
   justify-content: space-between;
 }
-.servicos-c-cards-web {
+.servicos-c-cards-web, .servicos-c-cards-design, .servicos-c-cards-ui {
+  margin-top: 50px;
+  width: 30%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.285) 100%), linear-gradient(180deg, rgba(48, 144, 234, 0.88) 0%, rgba(46, 88, 235, 0.88) 100%), linear-gradient(180deg, rgba(47, 81, 202, 0.89) 0%, rgba(45, 154, 255, 0.89) 100%);
-  padding: 60px 43px;
+  padding: 60px 40px;
   border-radius: 21px;
+  box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25);
 }
-.servicos-c-cards-web h2 {
+.servicos-c-cards-web img, .servicos-c-cards-design img, .servicos-c-cards-ui img {
+  width: 46px;
+}
+.servicos-c-cards-web h2, .servicos-c-cards-design h2, .servicos-c-cards-ui h2 {
   color: #D9F1FF;
+  margin-top: 10%;
+  font-size: 2rem;
 }
-.servicos-c-cards-web ul {
+.servicos-c-cards-web ul, .servicos-c-cards-design ul, .servicos-c-cards-ui ul {
   color: #91B7FA;
   line-height: 24px;
+  margin-top: 3%;
+  margin-bottom: 20%;
 }
-.servicos-c-cards-web a {
+.servicos-c-cards-web ul li, .servicos-c-cards-design ul li, .servicos-c-cards-ui ul li {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.servicos-c-cards-web .btn, .servicos-c-cards-design .btn, .servicos-c-cards-ui .btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.servicos-c-cards-web .btn a, .servicos-c-cards-design .btn a, .servicos-c-cards-ui .btn a {
   color: #fff;
+}
+.servicos-c-cards-web .btn a:hover, .servicos-c-cards-design .btn a:hover, .servicos-c-cards-ui .btn a:hover {
+  color: #73d7ce;
+}
+
+/*Passos*/
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+.active[data-tab-target] {
+  background-color: #385CDA;
+}
+
+.processo {
+  background-color: #181D30;
+}
+.processo-c {
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  padding: 20vh 0;
+}
+.processo-c-subtitulo {
+  color: #385CDA;
+  font-size: 1.3rem;
+}
+.processo-c-titulo {
+  font-size: 3.13rem;
+  color: #F5F5F5;
+}
+.processo-c-steps {
+  background-color: #232C4B;
+  padding: 8px;
+  border-radius: 27px;
+  box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25);
+}
+.processo-c-steps ul {
+  display: flex;
+}
+.processo-c-steps ul li {
+  text-align: center;
+  margin: 0 10px;
+  padding: 17px;
+  width: 33%;
+  justify-content: space-between;
+  border-radius: 100px;
+}
+.processo-c-steps-content {
+  margin: 55px 100px;
+}
+.processo-c-steps-content h2 {
+  font-size: 2.5rem;
+  color: #F5F5F5;
+}
+.processo-c-steps-content p {
+  font-size: 18px;
+  color: #B2B7E1;
 }
 
 /*# sourceMappingURL=styles.css.map */
