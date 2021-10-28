@@ -195,14 +195,17 @@ body{
     }
     .active[data-tab-content] {
         display: block;
+        transition: 1s;
 
     }
     .active[data-tab-target]{
+        transition: 1s;
         background-color: variables.$primary-color;
     }
    
     .processo{
         background-color: #181D30;
+
         &-c{
             @include mixins.container;
             padding: 20vh 0;
@@ -216,34 +219,177 @@ body{
             }
 
             &-steps{
+                min-height: 430px;
+                margin-top: 5%;
                 background-color: #232C4B;
-                padding: 8px;
+                padding: 10px;
                 border-radius: 27px;
                 box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25);
+                
 
                 ul{
                     display: flex;
-
-
+                    
                     li{
-                        text-align: center;
+                        cursor: pointer;
                         margin: 0 10px;
                         padding: 17px;
                         width: 33%;
+                        text-align: center;
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 1.3rem;
                         justify-content: space-between;
                         border-radius: 100px;
+                        background-color: #343F67;
                     }
                 }
                 &-content{
                     margin: 55px 100px;
-
+                    
                     h2{
-                      font-size: 2.5rem;
+                        font-size: 2.5rem;
                         color: variables.$white-color;
                     }
                     p{
-                        font-size: 18px;
+                        margin-top: 15px;
+                        font-size: 20px;
+                        line-height: 35px;
                         color: #B2B7E1;
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+/*Minha Base*/
+    .base{
+        background-color: variables.$primary-color;
+
+        &-c{
+            @include mixins.container;
+            padding: 15vh 0;
+
+            &-subtitulo{
+                @include mixins.subtitulo;
+                color: #fff;
+
+            }
+
+            &-titulo{
+                width: 80%;
+                @include mixins.titulo;
+            }
+
+            &-frase{
+                margin: 140px 0 60px 0;
+                font-size: 2.8rem;
+                color: #fff;
+                span{color:#16265F;}
+
+            }
+
+            a{
+                color: variables.$white-color;
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+
+            a:hover{color:#00f3ff;}
+
+                i {
+                    margin-left: 1%;
+                }
+        }
+    }
+
+/*Projetos*/
+    .projetos{
+        background-color: variables.$secundary-color;
+        &-c{
+            @include mixins.container;
+            padding: 15vh 0;
+
+            &-subtitulo{
+                @include mixins.subtitulo;
+                color: variables.$white-color;
+            }
+
+            &-titulo{
+                @include mixins.titulo;
+            }
+
+            &-cards{
+
+                &-1{
+                    transition: 1s;
+                    margin: 50px 0;
+                    padding: 411px 60px 50px;
+                    background-size: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    justify-content: space-between;
+                    border-radius: 21px;
+                    box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25);
+
+                    &-titulo{
+                        h2{
+                            @include mixins.titulo;
+                            font-size: 3rem;
+                        }
+                        h3{
+                            font-size: 1.15rem;
+                            color:#6F787E;
+                        }
+                    }
+
+                    &-btn{
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        justify-content: flex-end;
+                        width: 25%;
+
+                        a{
+                            color: variables.$white-color;
+                            font-weight: bold;
+                            font-size: 1.1rem;
+                        }
+                        a:hover{
+                            color:#00f3ff;
+                        }
+        
+                            i {
+                                margin-left: 1%;
+                            }
+                    }
+                }
+
+                &-1:hover{
+                    background-size: 105%;
+                    filter: brightness(80%);
+                    box-shadow: 0px 20px 29px 10px rgba(0, 0, 0, 0.40);
+                }
+            }
+
+            &-clientes{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+
+
+                &-logo{
+                    display: flex;
+                    justify-content: center;
+                    width: 25%;
+                    padding: 90px 10px;
+                    border: solid white 1px;
+
+                    img{
+                        width: 50%;
                     }
                 }
             }
