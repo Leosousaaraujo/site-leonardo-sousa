@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!--CSS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <!--Icons-->
     <script src="https://kit.fontawesome.com/a5312c09f9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
     <script src="script.js" defer></script>
     <title>Leonardo Sousa Designer</title>
 </head>
@@ -25,35 +27,49 @@
 
 <!--Banner Topo-->
     <section class="banner">
+        
         <div class="banner-social">
 
-            <h4 class="banner-social-text">Digital Design</h4>
+            <h4 class="banner-social-text" >Digital Design</h4>
             <div class="banner-social-line"></div>
         </div>
             <div class="banner-e">
-                <h3 class="banner-e-subtitulo">
-                    Olá eu sou o Léo 🤘
+                <h3 class="banner-e-subtitulo" data-aos="fade-up">
+                    Olá eu sou o Léo 
+                    &#x1F918;
                 </h3>
-                <h1 class="banner-e-principal">
+                <h1 class="banner-e-principal" data-aos="fade-up"  data-aos-delay="500">
                     Sou <span class="destaque">designer freelancer</span> especialista em projetos digitais.
                 </h1>
-                <a href="#" class="banner-e-btn">
+                
+               <!-- <a href="#" class="banner-e-btn" data-aos="zoom-in-right" data-aos-delay="1000">
                     Começar um projeto
                     <i class="fas fa-long-arrow-alt-right"></i>
-                </a>
+                </a>-->
+                <div class="banner-e-btn">
+                    <a href="#" class="banner-e-btn-cta">
+                        <span>Começar um projeto</span>
+                        <svg width="13px" height="10px" viewBox="0 0 13 10">
+                          <path d="M1,5 L11,5"></path>
+                          <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div class="banner-d">
-                <img src="img/montagem2.jpg" alt="Foto Leonardo Sousa" class="banner-d-img">
+                <img src="img/bg-topo.png" alt="Foto Leonardo Sousa" class="banner-d-img">
             </div>
     </section>
 
 <!--Serviços-->
     <section class="servicos">
         <div class="servicos-c">
+            <img class="servicos-c-balde"src="img/balde-azul.png" alt="">
+            <img class="servicos-c-points"src="img/points.png" alt="">
             <h3 class="servicos-c-subtitulo">Como posso te ajudar?</h3>
             <h1 class="servicos-c-titulo">Crio projetos digitais que ajudam marcas a se conectarem à pessoas.</h1>
             <div class="servicos-c-cards">
-                <div class="servicos-c-cards-web">
+                <div class="servicos-c-cards-web" data-aos="fade-up">
                     <img src="img/projeto-web.png" alt="">
                     <h2>Projetos Web</h2>
                     <ul>
@@ -66,7 +82,7 @@
                         <a href="#">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                 </div>
-                <div class="servicos-c-cards-ui">
+                <div class="servicos-c-cards-ui" data-aos="fade-up" data-aos-delay="200">
                     <img src="img/ui-ux.png" alt="">
                     <h2>UI / UX Design</h2>
                     <ul>
@@ -79,7 +95,7 @@
                         <a href="#">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                 </div>
-                <div class="servicos-c-cards-design">
+                <div class="servicos-c-cards-design" data-aos="fade-up" data-aos-delay="400">
                     <img src="img/design.png" alt="">
                     <h2>Design</h2>
                     <ul>
@@ -98,7 +114,9 @@
 
 <!--Como irá funcionar-->
     <section class="processo">
-        <div class="processo-c">
+        <img src="img/plus.png" alt="" class="processo-plus">
+
+        <div class="processo-c" data-aos="fade-up">
             <h3 class="processo-c-subtitulo">E como irá funcionar?</h3>
             <h1 class="processo-c-titulo">Um processo simples onde você participa da construção do projeto</h1>
             
@@ -128,6 +146,7 @@
                         <img src="img/divisor.png" alt="">
                         <h2>Criação</h2>
                         <p>E começamos a colocar a mão na massa. Nessa etapa engloba dêsde a criação do rascunho até os ajustes finais e entrega do projeto.</p>
+                        
                     </div>
                 </div>
             </div>
@@ -136,9 +155,9 @@
 
 <!--Base-->
     <section class="base">
-        <div class="base-c">
-            <h3 class="base-c-subtitulo">Minha base 💪</h3>
-            <h1 class="base-c-titulo">Acredito que tudo o que fasso deve ser eficaz, bonito e funcional.</h1>
+        <div class="base-c" data-aos="fade-up"  >
+            <h3 class="base-c-subtitulo">Minha base &#x1F4AA;</h3>
+            <h1 class="base-c-titulo">Acredito que tudo o que faço deve ser eficaz, bonito e funcional.</h1>
             <h2 class="base-c-frase"><span>Tire sua idéia do papel!<br>
                 Sem burocracia, sem enrolação,</span> com qualidade.</h2>
             <a href="#">Começar um projeto <i class="fas fa-long-arrow-alt-right"></i></a>
@@ -147,60 +166,71 @@
 
 <!--Projetos-->
     <section class="projetos">
+        <img src="img/balde-cores.png" alt="" class="projetos-balde">
+        <img src="img/mola.png" alt="" class="projetos-mola">
         <div class="projetos-c">
-            <h3 class="projetos-c-subtitulo">Quer conhecer mais?   💻</h3>
+            <h3 class="projetos-c-subtitulo">Quer conhecer mais?   &#x1F4BB;</h3>
             <h2 class="projetos-c-titulo">Projetos Selecionados</h2>
             <div class="projetos-c-cards">
 
                 <div class="projetos-c-cards-1" style="background-image: url(img/bg-1.jpg);">
                     <div class="projetos-c-cards-1-titulo">
-                        <h2>Caipira</h2>
-                        <h3>Projeto de identidade visual</h3>
+                        <h2>Sistema Trade Easy</h2>
+                        <h3>Projeto UI/UX Design</h3>
                     </div>
                     <div class="projetos-c-cards-1-btn">
-                        <a href="#">Ver projeto completo <i class="fas fa-long-arrow-alt-right"></i></a>
+                        <p>Em Breve</p>
                     </div>   
                 </div>
-                <div class="projetos-c-cards-1" style="background-image: url(img/bg-1.jpg);">
+
+                <div class="projetos-c-cards-1" style="background-image: url(img/trade-easy-app.jpg);">
                     <div class="projetos-c-cards-1-titulo">
-                        <h2>Caipira</h2>
-                        <h3>Projeto de identidade visual</h3>
+                        <h2>Trade Easy APP</h2>
+                        <h3>Projeto de UI Design</h3>
                     </div>
                     <div class="projetos-c-cards-1-btn">
-                        <a href="#">Ver projeto completo <i class="fas fa-long-arrow-alt-right"></i></a>
+                        <p>Em Breve</p>
                     </div>   
                 </div>
 
+                <div class="projetos-c-cards-1" style="background-image: url(img/bg-2.jpg);">
+                        <div class="projetos-c-cards-1-titulo">
+                            <h2>Redesign RockFunnels</h2>
+                            <h3>Projeto UI/UX Design</h3>
+                        </div>
+                        <div class="projetos-c-cards-1-btn">
+                            <p>Em Breve</p>
+                        </div>
+                </div>
+
             </div>
 
-            <div class="projetos-c-clientes">
-                <div class="projetos-c-clientes-logo">
-                    <img src="img/vigor.png" alt="">
-                </div>
-                <div class="projetos-c-clientes-logo">
-                    <img src="img/vigor.png" alt="">
-                </div>
-                <div class="projetos-c-clientes-logo">
-                    <img src="img/vigor.png" alt="">
-                </div>
-                <div class="projetos-c-clientes-logo">
-                    <img src="img/vigor.png" alt="">
-                </div>
-                <div class="projetos-c-clientes-logo">
-                    <img src="img/vigor.png" alt="">
-                </div>
-                <div class="projetos-c-clientes-logo">
-                    <img src="img/vigor.png" alt="">
-                </div>
-                <div class="projetos-c-clientes-logo">
-                    <img src="img/vigor.png" alt="">
-                </div>
-                <div class="projetos-c-clientes-logo">
-                    <img src="img/vigor.png" alt="">
-                </div>
-                
-            </div>
         </div>
     </section>
+    <section class="cta">
+        <div class="cta-c">
+            <h3 class="cta-c-subtitulo">Let's go! &#x1F680;</h3>
+            <h2 class="cta-c-titulo">Iae, vamos começar<br> um novo projeto?</h2>
+            <a href="#" class="cta-c-btn">Vamos Conversar <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+    </section>
+    <footer class="rodape">
+        <div class="rodape-c">
+            <h1 class="rodape-c-logo">
+                Leonardo <span class="header-lite"> Sousa.</span>
+            </h1>
+            <p class="rodape-c-cnpj">CNPJ: 000.000.000.000/00</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: "ease-out-quart",
+            duration: 1000
+        });
+    </script>
 </body>
 </html>

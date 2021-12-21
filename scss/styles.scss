@@ -3,7 +3,7 @@
 @use 'variables.scss';
 @use 'mixins.scss';
 
-
+html{scroll-behavior: smooth;}
 *{
     font-family: 'Poppins';
     padding: 0;
@@ -26,11 +26,10 @@ body{
 
 /*Logo*/
 .header{
-
     &-logo{
-        margin-left: 19.5%;
+        margin-left: 19%;
         font-size: 1.5rem;
-        color: #000;
+        color: #fff;
         padding: 2rem 0;
 
         span{
@@ -41,10 +40,13 @@ body{
 
 /*Banner Topo*/
 .banner{
+    margin-top: -100px;
+    padding-top: 100px;
     display: flex;
     justify-content: space-between;
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
+    background: linear-gradient(107.76deg, #26294B 3.69%, #14152C 91.99%);
 
 
     &-social{
@@ -58,15 +60,15 @@ body{
         &-text{
             transform: rotate(-90deg);
             font-size: 13px;
-            color: #1E2439;
+            color: variables.$white-color;
         }
     
 
         &-line{
-            border-left: 2px solid #1E2439;
+            border-left: 2px solid #fff;
             margin-top: 50px;
             height: 200px;
-            width: 50%;
+            width: 39%;
         }
 
     }
@@ -74,10 +76,12 @@ body{
         margin-left: 14%;
         margin-top: 15vh;
         align-items: center;
+        z-index: 10;
     
 
         &-subtitulo{
             font-size: 18px;
+            color: variables.$white-color;
         }
         
         &-principal{
@@ -86,7 +90,7 @@ body{
             font-size: 4.3vw;
             font-weight: bold;
             line-height: 5vw;
-            color: variables.$secundary-color;
+            color: variables.$white-color;
         }
 
             span{
@@ -102,17 +106,20 @@ body{
             i {
                 margin-left: 1%;
             }
+        &-btn{
+            @include mixins.btn-1;
+        }
             
     }
     &-d{
         width: 28vw;
     
         &-img{
-            width: 38vw;
-            position: relative;
-            top: -50px;
-            right: 50px;
-            z-index: -1;
+            width: 40%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            pointer-events: none
         }
     }   
 }
@@ -120,11 +127,25 @@ body{
 .servicos{
     background-color: variables.$bg-color-2;
     padding: 20vh 0;
+    position: relative;
 
     &-c{
         @include mixins.container;
 
-    
+
+        &-balde{
+            width: 455px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            pointer-events: none
+        }
+
+        &-points{
+            position: absolute;
+            left: 0;
+            pointer-events: none
+        }
 
         &-subtitulo{
             @include mixins.subtitulo;
@@ -142,25 +163,26 @@ body{
             &-web, &-design, &-ui{
                 margin-top: 50px;
                 width: 30%;
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.285) 100%), linear-gradient(180deg, rgba(48, 144, 234, 0.88) 0%, rgba(46, 88, 235, 0.88) 100%), linear-gradient(180deg, rgba(47, 81, 202, 0.89) 0%, rgba(45, 154, 255, 0.89) 100%);
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.285) 100%), linear-gradient(180deg, rgba(34, 37, 67, 0.88) 0%, rgba(34, 37, 67, 0.88) 100%), linear-gradient(180deg, rgba(47, 81, 202, 0.89) 0%, rgba(45, 154, 255, 0.89) 100%);
                 padding: 60px 40px;
                 border-radius: 21px;
                 box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25);
 
                 img{
+                    position: inherit;
                     width: 46px;
                 }
 
             
 
                 h2{
-                  color: #D9F1FF;
+                  color: #ffffff;
                   margin-top: 10%;
                   font-size: 2rem;
                 }
 
                 ul{
-                    color: #91B7FA;
+                    color: #6C739E;
                     line-height: 24px;
                     margin-top: 3%;
                     margin-bottom: 20%;
@@ -181,7 +203,7 @@ body{
 
                         
                     }
-                    a:hover{color:#73d7ce;}
+                    a:hover{color:variables.$primary-color;}
                        
                 }
             }
@@ -206,9 +228,18 @@ body{
     .processo{
         background-color: #181D30;
 
+        &-plus{
+            position: absolute;
+            width: 123.5px;
+            height: 117px;
+            left: 30px;
+            margin-top: -50px;
+        }
+
         &-c{
             @include mixins.container;
             padding: 20vh 0;
+
 
             &-subtitulo{
                 @include mixins.subtitulo;
@@ -220,11 +251,11 @@ body{
 
             &-steps{
                 min-height: 430px;
-                margin-top: 5%;
+                /*margin-top: 5%;
                 background-color: #232C4B;
                 padding: 10px;
                 border-radius: 27px;
-                box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25);
+                box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25);*/
                 
 
                 ul{
@@ -244,8 +275,23 @@ body{
                         background-color: #343F67;
                     }
                 }
+
+                &-tabs{
+                    margin-top: 5%;
+                    background-color: #232C4B;
+                    padding: 10px;
+                    border-radius: 100px;
+                    box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25);
+                }
+
                 &-content{
-                    margin: 55px 100px;
+                    min-height: 350px;
+                    width: 100%;
+                    margin-top: 2%;
+                    background-color: #232C4B;
+                    padding: 50px 100px;
+                    border-radius: 50px;
+                    box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25);
                     
                     h2{
                         font-size: 2.5rem;
@@ -256,7 +302,7 @@ body{
                         font-size: 20px;
                         line-height: 35px;
                         color: #B2B7E1;
-                        width: 80%;
+                        width: 85%;
                     }
                 }
             }
@@ -307,6 +353,20 @@ body{
 /*Projetos*/
     .projetos{
         background-color: variables.$secundary-color;
+
+        &-balde{
+            position: absolute;
+            right: 0;
+            width: 20%;
+            pointer-events: none;
+        }
+        &-mola{
+            position: absolute;
+            left: 0;
+            margin-top: 70%;
+            width: 10%;
+            pointer-events: none;
+        }
         &-c{
             @include mixins.container;
             padding: 15vh 0;
@@ -323,7 +383,7 @@ body{
             &-cards{
 
                 &-1{
-                    transition: 1s;
+                    transition: all 0.8s cubic-bezier(0.6, 0.24, 0.28, 0.85) 0s;
                     margin: 50px 0;
                     padding: 411px 60px 50px;
                     background-size: 100%;
@@ -331,6 +391,7 @@ body{
                     background-repeat: no-repeat;
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
                     border-radius: 21px;
                     box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25);
 
@@ -341,31 +402,17 @@ body{
                         }
                         h3{
                             font-size: 1.15rem;
-                            color:#6F787E;
+                            font-weight: normal;
+                            color:#e0e0e0;
                         }
                     }
-
+                    
                     &-btn{
-                        display: flex;
-                        flex-direction: column;
-                        flex-wrap: nowrap;
-                        justify-content: flex-end;
-                        width: 25%;
-
-                        a{
-                            color: variables.$white-color;
-                            font-weight: bold;
-                            font-size: 1.1rem;
-                        }
-                        a:hover{
-                            color:#00f3ff;
-                        }
-        
-                            i {
-                                margin-left: 1%;
-                            }
+                        p{color:white; font-size: 17px; font-weight: bold;}
                     }
-                }
+
+
+            }
 
                 &-1:hover{
                     background-size: 105%;
@@ -373,25 +420,64 @@ body{
                     box-shadow: 0px 20px 29px 10px rgba(0, 0, 0, 0.40);
                 }
             }
-
-            &-clientes{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                align-items: center;
-
-
-                &-logo{
-                    display: flex;
-                    justify-content: center;
-                    width: 25%;
-                    padding: 90px 10px;
-                    border: solid white 1px;
-
-                    img{
-                        width: 50%;
-                    }
-                }
-            }
         }
     }
+    
+
+/*CTA*/
+    .cta{
+        background-color: variables.$primary-color;
+        
+        &-c{
+            @include mixins.container;
+            padding: 20vh 0;
+        
+
+            &-subtitulo{
+                @include mixins.subtitulo;
+                color: variables.$white-color;
+            }
+
+            &-titulo{
+                @include mixins.titulo;
+                line-height: 70px;
+                margin-bottom: 8%;
+            }
+            
+            &-btn{
+                color: variables.$primary-color;
+                background-color: variables.$white-color;
+                padding: 20px 107px;
+                border-radius: 100px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+                i{
+                    padding-left: 10px;
+                }
+
+        }
+    }
+
+/*RODAPE*/
+    .rodape{
+        background-color: variables.$primary-color;
+        &-c{
+            @include mixins.container;
+            padding: 2vh 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1{
+            color: variables.$white-color;
+            font-size: 20px;
+        }
+        p{
+            color: variables.$white-color;
+            size: 1rem;
+        }
+    }
+
+
+    
