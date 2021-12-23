@@ -3,7 +3,27 @@
 @use 'variables.scss';
 @use 'mixins.scss';
 
+::-webkit-scrollbar{
+    width: 13px;
+    height: 13px;
+    }
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(150deg, #5566FF 18%,#4d5eff 77%);
+    border-radius: 30px;
+    }
+::-webkit-scrollbar-thumb:hover{
+    background: #5566FF;
+    }
+::-webkit-scrollbar-track{
+    background: #262642;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #000000;
+    }
+
+
 html{scroll-behavior: smooth;}
+
+
 *{
     font-family: 'Poppins';
     padding: 0;
@@ -12,8 +32,8 @@ html{scroll-behavior: smooth;}
 
 body{
     overflow-x: hidden;
-}
 
+}
 
     a{
         transition: .4s;
@@ -27,10 +47,11 @@ body{
 /*Logo*/
 .header{
     &-logo{
-        margin-left: 19%;
+        margin-left: 8%;
         font-size: 1.5rem;
         color: #fff;
         padding: 2rem 0;
+        padding-left: 123px;
 
         span{
             font-weight: 200;
@@ -46,7 +67,7 @@ body{
     justify-content: space-between;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(107.76deg, #26294B 3.69%, #14152C 91.99%);
+    background: linear-gradient(107.76deg, #26294B 3.69%, #10152C 91.99%);
 
 
     &-social{
@@ -55,6 +76,7 @@ body{
         justify-content: flex-end;
         align-items: flex-end;
         width: 240px;
+        margin-left: -30px;
     
 
         &-text{
@@ -68,12 +90,12 @@ body{
             border-left: 2px solid #fff;
             margin-top: 50px;
             height: 200px;
-            width: 39%;
+            width: 50px;
         }
 
     }
     &-e{
-        margin-left: 14%;
+        margin-left: 10%;
         margin-top: 15vh;
         align-items: center;
         z-index: 10;
@@ -119,10 +141,11 @@ body{
             position: absolute;
             right: 0;
             bottom: 0;
-            pointer-events: none
+            pointer-events: none;
         }
     }   
 }
+
 /*Serviços*/
 .servicos{
     background-color: variables.$bg-color-2;
@@ -134,17 +157,23 @@ body{
 
 
         &-balde{
-            width: 455px;
+            width: 30%;
             position: absolute;
             right: 0;
             top: 0;
-            pointer-events: none
+            pointer-events: none;
+            animation: balde 2s ease infinite;    
+        }
+        @keyframes balde{
+            0%{top: 0;}
+            50%{top: 10px;}
+            100%{top: 0;}
         }
 
         &-points{
             position: absolute;
-            left: 0;
-            pointer-events: none
+            right: 98vw;
+            pointer-events: none;
         }
 
         &-subtitulo{
@@ -158,22 +187,22 @@ body{
         &-cards{
             display: flex;
             justify-content: space-between;
-        
+            
             
             &-web, &-design, &-ui{
+                
                 margin-top: 50px;
                 width: 30%;
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.285) 100%), linear-gradient(180deg, rgba(34, 37, 67, 0.88) 0%, rgba(34, 37, 67, 0.88) 100%), linear-gradient(180deg, rgba(47, 81, 202, 0.89) 0%, rgba(45, 154, 255, 0.89) 100%);
                 padding: 60px 40px;
                 border-radius: 21px;
-                box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25);
+                box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25); 
+
 
                 img{
                     position: inherit;
                     width: 46px;
                 }
-
-            
 
                 h2{
                   color: #ffffff;
@@ -196,19 +225,19 @@ body{
                 
                 .btn{
                     display: flex;
-                    justify-content: flex-end;
+                    justify-content: flex-start;
                     align-items: flex-end;
                     a{
                         color: #fff;
-
                         
                     }
                     a:hover{color:variables.$primary-color;}
-                       
                 }
             }
+            &-web:hover, &-design:hover, &-ui:hover{box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.40); transition: 1s;}
         }
     }
+    
 }
 
 /*Passos*/
@@ -311,8 +340,15 @@ body{
 
 /*Minha Base*/
     .base{
-        background-color: variables.$primary-color;
+        background: linear-gradient(104.22deg, #385CDA 5.65%, #5f94ff 96.27%);
+        animation: basebg 5s ease infinite;
+        background-size: 300% 300%;
 
+        @keyframes basebg{
+            0%{background-position: 0% 50%;}
+            50%{background-position: 100% 50%;}
+            100%{background-position: 0% 50%;}
+        }
         &-c{
             @include mixins.container;
             padding: 15vh 0;
@@ -366,7 +402,14 @@ body{
             margin-top: 70%;
             width: 10%;
             pointer-events: none;
+            animation: mola 2s ease infinite;
         }
+        @keyframes mola{
+            0%{left: 0;}
+            50%{left: 5px;}
+            100%{left: 0;}
+        }
+
         &-c{
             @include mixins.container;
             padding: 15vh 0;
@@ -383,11 +426,12 @@ body{
             &-cards{
 
                 &-1{
+                    cursor: pointer;
                     transition: all 0.8s cubic-bezier(0.6, 0.24, 0.28, 0.85) 0s;
                     margin: 50px 0;
-                    padding: 411px 60px 50px;
+                    padding: 35% 6% 5%;
                     background-size: 100%;
-                    background-position: center;
+                    background-position: bottom;
                     background-repeat: no-repeat;
                     display: flex;
                     justify-content: space-between;
@@ -415,6 +459,7 @@ body{
             }
 
                 &-1:hover{
+                    transition: all 0.8s cubic-bezier(0.6, 0.24, 0.28, 0.85) 0s;
                     background-size: 105%;
                     filter: brightness(80%);
                     box-shadow: 0px 20px 29px 10px rgba(0, 0, 0, 0.40);
@@ -455,6 +500,10 @@ body{
                 i{
                     padding-left: 10px;
                 }
+            
+            &-btn:hover{
+                box-shadow: #3237b77a 3px 3px 4px 0px;
+            }
 
         }
     }
@@ -480,4 +529,319 @@ body{
     }
 
 
+
+/*=====================TABLET==========================================*/
+@media only screen and (max-width: 1050px){
+        /*Logo*/
+    .header{
+        &-logo{
+            margin-left: 0;
+            padding-left: 80px;
+        }
+    }
+
+    /*Banner Topo*/
+    .banner{
+        height: 75vh;
+
+        &-social{
+            width: 250px;
+            margin-left: -30px;
+
+            &-line{
+                width: 48px;
+            }
+        }
+        &-e{
+            margin-left: 0;
+
+            &-principal{
+                font-size: 2.50rem;
+                line-height: 3rem;
+            }
+        
+        }
+        &-d{
+            width: 28vw;
+        
+            &-img{
+                overflow: hidden;
+                width: 50%;
+                bottom: 25vh;
+            }
+        }   
+    }
+
+        /*Serviços*/
+    .servicos{
+        &-c{
+
+            &-balde{
+                width: 30%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                pointer-events: none;
+                animation: balde 2s ease infinite;    
+            }
+            @keyframes balde{
+                0%{top: 0;}
+                50%{top: 10px;}
+                100%{top: 0;}
+            }
+
+            &-points{
+                display: none;
+            }
+
+            &-subtitulo{
+                @include mixins.subtitulo;
+            }
+
+            &-titulo{
+                @include mixins.titulo;
+            }
+
+            &-cards{
+                flex-wrap: wrap;
+
+
+                &-web, &-design, &-ui{
+                    width: 60%;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.285) 100%), linear-gradient(180deg, rgba(34, 37, 67, 0.88) 0%, rgba(34, 37, 67, 0.88) 100%), linear-gradient(180deg, rgba(47, 81, 202, 0.89) 0%, rgba(45, 154, 255, 0.89) 100%);
+                    padding: 60px 40px;
+                    border-radius: 21px;
+                    box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.25); 
+
+
+                    img{
+                        position: inherit;
+                        width: 46px;
+                    }
+
+                    h2{
+                      color: #ffffff;
+                      margin-top: 10%;
+                      font-size: 2rem;
+                    }
+
+                    ul{
+                        color: #6C739E;
+                        line-height: 24px;
+                        margin-top: 3%;
+                        margin-bottom: 20%;
+
+                        li{
+                            font-weight: 500;
+                            font-size: 1rem;
+                            line-height: 2rem;
+                        }
+                    }
+
+                    .btn{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        a{
+                            color: #fff;
+
+                        }
+                        a:hover{color:variables.$primary-color;}
+                    }
+                }
+                &-web:hover, &-design:hover, &-ui:hover{box-shadow: 0px 20px 29px -4px rgba(0, 0, 0, 0.40); transition: 1s;}
+            }
+        }
+
+    }
     
+    .projetos{
+
+        &-balde{
+            width: 30%;
+        }
+        &-mola{
+            position: absolute;
+            left: 0;
+            margin-top: 80%;
+            width: 10%;
+            pointer-events: none;
+            animation: mola 2s ease infinite;
+        }
+        &-c{
+            &-cards{
+                &-1:hover{ 
+                    background-size:110%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    ::-webkit-scrollbar{width: none;}
+
+    .header{
+        padding: 0 10vw;
+        &-logo{
+            margin-left: 0;
+            padding-left: 0;
+            font-size: 1rem;
+        }
+    }
+
+    .banner{
+        height: 100vh;
+        padding: 50px 5vw 0 10vw ;
+        flex-direction: column;
+
+        &-social{display: none;}
+
+        &-e{
+            &-subtitulo{
+                font-size: 1rem;
+            }
+            &-principal{
+                font-size: 2rem;
+                line-height: 2.5rem;
+                margin-bottom: 20%;
+            }
+            
+        }
+
+        &-d{
+            &-img{
+                bottom: 0;
+                width: 40vh;
+            }
+        }
+    }
+
+    .servicos{
+        padding: 10vh 0;
+
+        &-c{
+            &-balde{
+                width: 45%;
+            }
+
+            &-cards{
+                &-web, &-design, &-ui{
+                    margin-top: 30px;
+                    width: 100%;
+                    padding: 40px 30px;
+
+                    h2{
+                        font-size: 1.3rem;
+                    }
+                    ul{
+                        margin-bottom: 10%;
+                        li{
+                            font-size: 0.9rem;
+                        }
+                    }
+                    .btn{
+                        justify-content: flex-start;
+                    }
+                }
+            }
+        }
+    }
+
+    .processo{
+        &-c{
+            &-titulo{
+                margin-bottom: 10%;
+            }
+            &-steps{
+                ul{
+                    li{
+                        font-size: 0.8rem;
+                        padding: 10px;
+                        margin: 0 2px;
+                    }
+                }
+            
+                &-tabls{
+                    padding: 5px;
+                }
+                &-content{
+                    padding: 50px 30px;
+                    border-radius: 30px;
+                    h2{font-size: 1.8rem;}
+                    p{font-size: 0.9rem; line-height: 1.8rem; width: 100%;}
+                }
+            }
+        }
+    }
+
+    .base{
+        &-c{
+            &-frase{
+                font-size: 1.8rem;
+                margin: 50px 0;
+            }
+        }
+    }
+
+    .projetos{
+        &-balde{
+            width: 40%;
+        }
+        &-mola{
+            width: 20%;
+            margin-top: 240%;
+        }
+
+        &-c{
+            &-cards{
+                &-1{
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15% 6%;
+                background-size: 220%;
+
+                    &-titulo{
+                        h2{font-size: 1.3rem; line-height: 1.5rem;}
+                        h3{font-size: 1rem;}
+                    }
+
+                    &-btn{
+                        margin-top: 100%;
+
+                    }
+                }
+                &-1:hover{ 
+                    background-size: 230%;
+                }
+            }
+        }
+    }
+
+    .cta{
+        &-c{
+            padding: 15vh 0;
+            &-titulo{
+                line-height: 2rem;
+                margin-bottom: 20%;
+            }
+            &-btn{
+                padding: 20px 30px;
+            }
+        }
+    }
+
+    .rodape{
+        &-c{
+            flex-direction: column;
+
+            h1{
+                font-size: 1rem;
+            }
+            p{
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+}
